@@ -2,7 +2,7 @@
 /*
 Plugin Name:		Sherpa PayHub Gateway Plugin for WooCommerce
 Plugin URI:			https://github.com/agims/sherpa-payhub-wc
-Description:		This plugin allows you to accept credit card payments through PayHub in your WooCommerce storefront.  Based on "PayHub Gateway Plugin for WooCommerce" at https://wordpress.org/plugins/payhub-payment-gateway-for-woocommerce/ by EJ Costiniano, Lon Sun, and PayHub.
+Description:		This plugin allows you to accept credit card payments through PayHub in your WooCommerce storefront.  Based on "<a href="https://wordpress.org/plugins/payhub-payment-gateway-for-woocommerce/">PayHub Gateway Plugin for WooCommerce</a>" by EJ Costiniano, Lon Sun, and PayHub.
 Version:			1.0
 Author:				Chris G. Clapp
 Author URI:			http://www.chrisclapp.com
@@ -219,31 +219,37 @@ function sherpa_woocommerce_payhub_init() {
         	
         	?>
 
-				<fieldset>
-					<p class="form-row">
-						<label for="card_number"><?php echo __("Credit Card number", 'woocommerce') ?> <span class="required">*</span></label>
-						<input type="text" class="input-text" name="card_number" />
-					</p>
-					<div class="clear"></div>
-					<p class="form-row">
-						<label for="cc_exp_month"><?php echo __("Expiration date", 'woocommerce') ?> <span class="required">*</span></label>
-					</p>
-					<p class="form-row form-row-first">
-						<select name="card_exp_month" id="cc_exp_month">
-							<?php echo $month_select; ?>
-						</select>
-					</p>
-					<p class="form-row form-row-last">	
-						<select name="card_exp_year" id="cc_exp_year">
-							<?php echo $year_select; ?>
-						</select>
-					</p>
-					<p class="form-row">
-						<label for="card_cvv"><?php _e("Card security code", 'woocommerce') ?> <span class="required">*</span></label>
-						<input type="text" class="input-text" id="cc_cvv" name="card_cvv" maxlength="4" style="width:45px" />
-						<span class="help payhub_card_cvv_description"></span>
-					</p>
-					<div class="clear"></div>
+				<fieldset class="form-horizontal">
+					<div class="form-group">
+						<label for="card_number" class="col-sm-4 control-label">
+							<?php echo __("Credit Card number", 'woocommerce') ?> <span class="required">*</span>
+						</label>
+						<div class="col-sm-20">
+							<input type="text" class="form-control" name="card_number" placeholder="xxxx-xxxx-xxxx-xxxx" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="cc_exp_month" class="col-sm-4 control-label">
+							<?php echo __("Expiration date", 'woocommerce') ?> <span class="required">*</span>
+						</label>
+						<div class="col-sm-20">
+							<select name="card_exp_month" id="cc_exp_month">
+								<?php echo $month_select; ?>
+							</select>
+							<select name="card_exp_year" id="cc_exp_year">
+								<?php echo $year_select; ?>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="card_cvv" class="col-sm-4 control-label">
+							<?php _e("Card security code", 'woocommerce') ?> <span class="required">*</span>
+						</label>
+						<div class="col-sm-20">
+							<input type="text" class="form-control" id="cc_cvv" name="card_cvv" maxlength="4" style="width:45px" />
+							<span class="help payhub_card_cvv_description"></span>
+						</div>
+					</div>
 				</fieldset>
 
 			<?php
