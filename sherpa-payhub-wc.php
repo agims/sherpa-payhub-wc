@@ -59,7 +59,7 @@ function sherpa_woocommerce_payhub_init() {
 		function __construct() { 				
 			$this->id	= 'payhub';
 			$this->method_title 	= __('PayHub', 'woothemes');
-			$this->icon = WP_PLUGIN_URL . "/" . plugin_basename( dirname(__FILE__)) . '/PoweredbyPayHubCards.png';
+			$this->icon = WP_PLUGIN_URL . "/" . plugin_basename( dirname(__FILE__)) . '/accepted-cards.png';
 			$this->has_fields = true;
 			
 			// Load the form fields
