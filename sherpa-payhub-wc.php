@@ -221,18 +221,18 @@ function sherpa_woocommerce_payhub_init() {
 
 				<fieldset class="form-horizontal">
 					<div class="form-group">
-						<label for="card_number" class="col-md-12 col-sm-9 control-label">
+						<label for="card_number" class="col-md-12 control-label">
 							<?php echo __("Credit Card number", 'woocommerce') ?> <span class="required">*</span>
 						</label>
-						<div class="col-md-12 col-sm-15">
+						<div class="col-md-12">
 							<input type="text" class="form-control" name="card_number" placeholder="xxxx-xxxx-xxxx-xxxx" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="cc_exp_month" class="col-md-12 col-sm-9 control-label">
+						<label for="cc_exp_month" class="col-md-12 control-label">
 							<?php echo __("Expiration date", 'woocommerce') ?> <span class="required">*</span>
 						</label>
-						<div class="col-md-12 col-sm-15">
+						<div class="col-md-12">
 							<select name="card_exp_month" id="cc_exp_month">
 								<?php echo $month_select; ?>
 							</select>
@@ -242,10 +242,10 @@ function sherpa_woocommerce_payhub_init() {
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="card_cvv" class="col-md-12 col-sm-9 control-label">
+						<label for="card_cvv" class="col-md-12 control-label">
 							<?php _e("Card security code", 'woocommerce') ?> <span class="required">*</span>
 						</label>
-						<div class="col-md-12 col-sm-15">
+						<div class="col-md-12">
 							<input type="text" class="form-control" id="cc_cvv" name="card_cvv" maxlength="4" style="width:45px" />
 							<span class="help payhub_card_cvv_description"></span>
 						</div>
