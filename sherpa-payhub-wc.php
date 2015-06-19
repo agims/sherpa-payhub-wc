@@ -248,7 +248,7 @@ function sherpa_woocommerce_payhub_init() {
 							<?php _e("Card security code", 'woocommerce') ?> <span class="required">*</span>
 						</label>
 						<div class="col-md-12">
-							<input type="text" class="form-control" id="cc_cvv" name="card_cvv" maxlength="4" style="width:45px" />
+							<input type="text" class="form-control" id="cc_cvv" name="card_cvv" maxlength="4" placeholder="xxx or xxxx" />
 							<span class="help payhub_card_cvv_description"></span>
 						</div>
 					</div>
