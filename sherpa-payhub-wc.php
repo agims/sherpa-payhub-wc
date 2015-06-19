@@ -229,7 +229,7 @@ function sherpa_woocommerce_payhub_init() {
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="cc_exp_month" class="col-md-12 control-label">
+						<label for="cc_exp_month" class="col-md-12 col-xxs-24 control-label">
 							<?php echo __("Expiration date", 'woocommerce') ?> <span class="required">*</span>
 						</label>
 						<div class="col-md-6 col-xxs-12">
